@@ -1,0 +1,8 @@
+$theme-color:#3fc7f5;
+
+$view-color: #eee;
+
+@mixin hover-style {
+  color: $theme-color;
+  cursor: pointer;
+}
