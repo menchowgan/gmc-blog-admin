@@ -14,7 +14,8 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "element-plus/global"
+      "element-plus/global",
+      "vite/client"
     ],
     "paths": {
       "@/*": [
