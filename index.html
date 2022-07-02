@@ -1,19 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <link rel="icon" href="./icon.png">
-  <title>gmc-blog-admin</title>
-</head>
-<body>
-  <noscript>
-    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-  </noscript>
-  <div id="app"></div>
-  <script type="module" src="./src/main.ts"></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="icon" href="./icon.png">
+    <title>gmc-blog-admin</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background-image: url("./src/assets/images/background.webp");
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      #app {
+        width: 100vw;
+        height: 100vh;
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+          Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+      <div class="loading-index">
+        <div class="load-dialog-index">
+          <img class="load-img-index" src="./icon.png" alt="NO DATA!">
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
 </html>
