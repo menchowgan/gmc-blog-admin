@@ -2,7 +2,7 @@ import { request } from '@/utils/http';
 import { UserModel } from "../interfaces"
 
 export default class UserManager {
-  public static USER_ID = 1
+  public static USER_ID = 12
 
   constructor() {
     
