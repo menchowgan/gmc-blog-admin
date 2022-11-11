@@ -1,3 +1,4 @@
+import GMessage from '@/plugins/GMessage';
 import { request } from '@/utils/http';
 import { UserModel } from "../interfaces"
 
@@ -74,6 +75,47 @@ export default class UserManager {
       return null
     } catch (e) {
       return null
+    }
+  }
+
+  /**
+   * enroll
+   */
+  public async enroll(
+    info: {
+      userName: string,
+      password: string
+    }): Promise<boolean> {
+    try {
+      const res = await request("USER_ENROLL", info)
+      console.log("res", res);
+      return false
+    } catch (e) {
+      return false
+    }
+  }
+
+  /**
+   * login
+   */
+  public async login(
+    info: {
+      userName: string,
+      password: string
+    }): Promise<number> {
+    try {
+      const res = await request("USER_LOGIN", info)
+      console.log("res", res);
+      if (res && res.data) {
+        UserManager.USER_ID = res.data
+        return res.data
+      }
+      GMessage(res.message, {
+        type: 'error'
+      })
+      return 0
+    } catch (e) {
+      return 0
     }
   }
 }

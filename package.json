@@ -23,6 +23,8 @@
     "vue-router": "^4.0.16"
   },
   "devDependencies": {
-    "@types/node": "^17.0.45"
+    "@types/node": "^17.0.45",
+    "vite-plugin-optimize-persist": "^0.1.2",
+    "vite-plugin-package-config": "^0.1.1"
   }
 }
