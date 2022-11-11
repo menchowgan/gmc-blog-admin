@@ -26,6 +26,14 @@ const CONFIG_METHODS: ConfigModel = {
     url: "/user/person-info-post",
     method: "post"
   },
+  "USER_ENROLL": {
+    url: "/user/enroll",
+    method: "post"
+  },
+  "USER_LOGIN": {
+    url: "/user/login",
+    method: "post"
+  },
   "AVATAR_UPLOAD": {
     url: "/photo/avatar/upload",
     method: "post"

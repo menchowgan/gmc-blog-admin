@@ -1,12 +1,20 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue"
 import path from "path";
+import OptimizationPersist from 'vite-plugin-optimize-persist'
+import PkgConfig from 'vite-plugin-package-config'
+
+const resolve = (dir: string) => path.join(__dirname, dir)
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    OptimizationPersist(),
+    PkgConfig()
+  ],
   resolve: {
     alias: {
-      "@": path.join(__dirname, "src")
+      "@": resolve("src")
     },
   },
   server: {

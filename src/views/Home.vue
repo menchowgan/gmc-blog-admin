@@ -1,10 +1,11 @@
 <template>
-  <div class="admin-container flex column">
-    hello vite + vue3
+  <div class="admin-container flex column" >
+    <Login />
   </div>
 </template>
 
 <script lang="ts" setup>
+import Login from '@/components/Login.vue';
 </script>
 
 <style scoped lang="scss">
